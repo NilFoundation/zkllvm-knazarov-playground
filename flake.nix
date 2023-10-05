@@ -154,6 +154,7 @@
       packages = forAllSystems ({ pkgs }: rec {
         zkllvm = (pkgs.callPackage ./zkllvm.nix {
           repos = repos;
+          stdenv = pkgs.llvmPackages_16.stdenv;
         });
         default = zkllvm;
       });

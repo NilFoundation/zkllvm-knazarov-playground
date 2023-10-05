@@ -18,6 +18,7 @@ stdenv.mkDerivation rec {
     python3
     (boost182.override {enableStatic = true;})
     spdlog
+    icu
     (pkgs.callPackage ./boost_cmake.nix {
       stdenv = stdenv;
       repos = repos;
@@ -64,11 +65,18 @@ stdenv.mkDerivation rec {
       cp -rT --no-preserve=mode,ownership "${repos.crypto3_zk_marshalling}"/ ./source/libs/crypto3/libs/marshalling/zk
   '';
 
-  patches = [ ./cm.diff ];
+  #preBuild = ''
+    #addAutoPatchelfSearchPath ${placeholder "out"}/zkllvm/lib/
+  #'';
+
+  patches = [
+    ./cm.diff
+    ./assigner.diff
+  ];
 
   cmakeFlags = [
     "-DCMAKE_BUILD_TYPE=Release"
-    "-DCMAKE_INSTALL_PREFIX=${placeholder "out"}/zkllvm"
+    #"-DCMAKE_INSTALL_PREFIX=${placeholder "out"}/zkllvm"
     "-DBoost_USE_STATIC_LIBS=FALSE"
     "-DZKLLVM_VERSION=0.1.0"
   ];
