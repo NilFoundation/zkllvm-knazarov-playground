@@ -135,7 +135,7 @@
   };
 
   # Flake outputs
-  outputs = { self, nixpkgs, ... }@ repos_input:
+  outputs = { self, nixpkgs, ... }@repos_input:
     let
       # Systems supported
       allSystems = [
@@ -157,6 +157,16 @@
           stdenv = pkgs.llvmPackages_16.stdenv;
         });
         default = zkllvm;
+      });
+      devShells = forAllSystems ({ pkgs }: rec {
+        default = pkgs.mkShell {
+          buildInputs = [
+            (pkgs.callPackage ./zkllvm.nix {
+              repos = repos;
+              stdenv = pkgs.llvmPackages_16.stdenv;
+            })
+          ];
+        };
       });
     };
 }
