@@ -158,15 +158,15 @@
         });
         default = zkllvm;
       });
-      devShells = forAllSystems ({ pkgs }: rec {
-        default = pkgs.mkShell {
-          buildInputs = [
-            (pkgs.callPackage ./zkllvm.nix {
-              repos = repos;
-              stdenv = pkgs.llvmPackages_16.stdenv;
-            })
-          ];
-        };
-      });
+      #devShells = forAllSystems ({ pkgs }: rec {
+        #default = pkgs.mkShell {
+          #buildInputs = [
+            #(pkgs.callPackage ./zkllvm.nix {
+              #repos = repos;
+              #stdenv = pkgs.llvmPackages_16.stdenv;
+            #})
+          #];
+        #};
+      #});
     };
 }

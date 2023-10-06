@@ -72,6 +72,9 @@ stdenv.mkDerivation rec {
   patches = [
     ./cm.diff
     ./assigner.diff
+    ./purity.patch
+    ./gnu-install-dirs.patch
+    ./stdlib.patch
   ];
 
   cmakeFlags = [
@@ -79,5 +82,10 @@ stdenv.mkDerivation rec {
     #"-DCMAKE_INSTALL_PREFIX=${placeholder "out"}/zkllvm"
     "-DBoost_USE_STATIC_LIBS=FALSE"
     "-DZKLLVM_VERSION=0.1.0"
+    "-DCIRCUIT_ASSEMBLY_OUTPUT=TRUE"
   ];
+
+  postInstall = ''
+
+  '';
 }
