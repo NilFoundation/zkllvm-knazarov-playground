@@ -13,3 +13,16 @@ nix build
 ```
 
 And wait. After 30 minutes or so, you should have everything built correctly in the `result/` directory.
+
+## Compiling circuits
+
+
+./result/bin/clang -target assigner -I./result/include/zkllvm/c++ -I./result/include/zkllvm -D__ZKLLVM__ -emit-llvm -S -o circuit.ll strlen.cpp
+
+./result/bin/llvm-link -S -o final_circuit.ll circuit.ll ./result/lib/zkllvm/zkllvm-libc.ll
+
+./result/bin/assigner -b final_circuit.ll -i strlen.inp -t assignment.tbl -c circuit.crct -e pallas
+
+checking:
+
+../result/bin/assigner -b final_circuit.ll -i strlen.inp -t assignment.tbl -c circuit.crct -e pallas --check

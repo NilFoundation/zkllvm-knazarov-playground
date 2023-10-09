@@ -1,0 +1,24 @@
+diff --git a/bin/proof-generator-mt/src/aspects/prover_vanilla.cpp b/bin/proof-generator-mt/src/aspects/prover_vanilla.cpp
+index 42f07f1..9ecab50 100644
+--- a/bin/proof-generator-mt/src/aspects/prover_vanilla.cpp
++++ b/bin/proof-generator-mt/src/aspects/prover_vanilla.cpp
+@@ -23,6 +23,7 @@
+ #include <boost/property_tree/ini_parser.hpp>
+ #include <boost/program_options/parsers.hpp>
+ #include <boost/filesystem.hpp>
++#include <boost/filesystem/string_file.hpp>
+ 
+ namespace std {
+     template<typename CharT, typename TraitsT>
+diff --git a/bin/proof-generator/src/aspects/prover_vanilla.cpp b/bin/proof-generator/src/aspects/prover_vanilla.cpp
+index 3e46a25..9cc58fa 100644
+--- a/bin/proof-generator/src/aspects/prover_vanilla.cpp
++++ b/bin/proof-generator/src/aspects/prover_vanilla.cpp
+@@ -23,6 +23,7 @@
+ #include <boost/property_tree/ini_parser.hpp>
+ #include <boost/program_options/parsers.hpp>
+ #include <boost/filesystem.hpp>
++#include <boost/filesystem/string_file.hpp>
+ 
+ namespace std {
+     template<typename CharT, typename TraitsT>

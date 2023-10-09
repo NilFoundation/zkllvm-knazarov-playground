@@ -1,5 +1,134 @@
 {
   "nodes": {
+    "actor_blueprint": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1683043973,
+        "narHash": "sha256-4go2Ds7b2/QttZlzyXl1vfSv2hG4mkoOEsP7s80q1S8=",
+        "owner": "NilFoundation",
+        "repo": "actor-blueprint",
+        "rev": "afee9b054b940da60280a8ef3f8bf54dbe127a9a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "ref": "afee9b054b940da60280a8ef3f8bf54dbe127a9a",
+        "repo": "actor-blueprint",
+        "type": "github"
+      }
+    },
+    "actor_cluster": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1674253812,
+        "narHash": "sha256-bJXQ8dCuzhgpVCjhkT1D4rr5HhuxXH4L8L5yiXWhsEI=",
+        "owner": "NilFoundation",
+        "repo": "actor-cluster",
+        "rev": "9bd1c098e661f248474a15b209f2dd08b3a440c0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "repo": "actor-cluster",
+        "type": "github"
+      }
+    },
+    "actor_container": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1685440313,
+        "narHash": "sha256-XUg/LRtBeJrhCSpAn9E1Twce9j1B5BF9/UvfLlYD5cY=",
+        "owner": "NilFoundation",
+        "repo": "actor-containers",
+        "rev": "efa66dcbb98cab920d2c105c6647146a01fe84ed",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "repo": "actor-containers",
+        "type": "github"
+      }
+    },
+    "actor_core": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1696256562,
+        "narHash": "sha256-INEwGDaRRfNwbTVojrh3FgwDoAgvXKCRClAzXdqKbsk=",
+        "owner": "NilFoundation",
+        "repo": "actor-core",
+        "rev": "c46cb0757bb5f9800c67f4aa17816236da7b6978",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "repo": "actor-core",
+        "type": "github"
+      }
+    },
+    "actor_math": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1695992591,
+        "narHash": "sha256-cCSuCVX6+uBr6iibWl34OjtBXoBPj03cvxaCd3SRPVE=",
+        "owner": "NilFoundation",
+        "repo": "actor-math",
+        "rev": "affb1b50deda56e19b47d3dd050c4e5d6ddc6299",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "repo": "actor-math",
+        "type": "github"
+      }
+    },
+    "actor_network": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1684337721,
+        "narHash": "sha256-Kysqesgavh3InAgs0Gn0ARz0qjINIObF57bo6yK9gVA=",
+        "owner": "NilFoundation",
+        "repo": "actor-network",
+        "rev": "30fb89c352ce9bc5383b17d06c2ab8c7e3f72049",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "repo": "actor-network",
+        "type": "github"
+      }
+    },
+    "actor_zk": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1696255993,
+        "narHash": "sha256-s1K5QrkvsWYVtOLnURXflzMFaEANOTdFxYp1Lv8tkyQ=",
+        "owner": "NilFoundation",
+        "repo": "actor-zk",
+        "rev": "bd4e644b942ede1dcacfe120a627fd07656f809a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "repo": "actor-zk",
+        "type": "github"
+      }
+    },
+    "application": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1589123550,
+        "narHash": "sha256-F2YMaq23iCPs8YvksSY1Y0P3dpQx1MWm88oCAjhW+OU=",
+        "owner": "NilFoundation",
+        "repo": "application",
+        "rev": "709af80998ac7699ee39e7a8dfda34ff53740699",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "repo": "application",
+        "type": "github"
+      }
+    },
     "assigner": {
       "flake": false,
       "locked": {
@@ -125,6 +254,22 @@
       "original": {
         "owner": "NilFoundation",
         "repo": "crypto3-block",
+        "type": "github"
+      }
+    },
+    "crypto3_blueprint": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1696865356,
+        "narHash": "sha256-o7P7qoOtII+sAghA9vCmTU8ZWyyUZEsI2EsrQyjolxg=",
+        "owner": "NilFoundation",
+        "repo": "crypto3-blueprint",
+        "rev": "ee981c6f0a92ae674b392d89ad681af42ce0cb30",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "repo": "crypto3-blueprint",
         "type": "github"
       }
     },
@@ -432,6 +577,38 @@
         "type": "github"
       }
     },
+    "dpdk": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1477555993,
+        "narHash": "sha256-Oh5EDEhNHef5fTxRRYlE7CfcTPisskMRoZaurjF9SKA=",
+        "owner": "NilFoundation",
+        "repo": "dpdk",
+        "rev": "cc7e6ed22c0fc08e3ff37b3e68a61979d8214547",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "repo": "dpdk",
+        "type": "github"
+      }
+    },
+    "epoll_shim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1619295416,
+        "narHash": "sha256-Tneuq7KU6ikHxuaNCzspCbhPmErnEwzsMH+gW066ZJE=",
+        "owner": "NilFoundation",
+        "repo": "epoll-shim",
+        "rev": "a5586d1462b7e22258746d1ab6c85d35c72ab3db",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "repo": "epoll-shim",
+        "type": "github"
+      }
+    },
     "marshalling": {
       "flake": false,
       "locked": {
@@ -445,6 +622,22 @@
       "original": {
         "owner": "NilFoundation",
         "repo": "marshalling",
+        "type": "github"
+      }
+    },
+    "module": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1619268615,
+        "narHash": "sha256-m7POp6HC+QM9oLebH8mIOZSobJoaRPfiEBabaJp2FYI=",
+        "owner": "NilFoundation",
+        "repo": "module",
+        "rev": "f83eb81a78216190b7b074c579194a6a597b71ca",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "repo": "module",
         "type": "github"
       }
     },
@@ -463,8 +656,167 @@
         "type": "github"
       }
     },
+    "plugin": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1651699180,
+        "narHash": "sha256-RJpApoDoduf0WF/5lDJr2YB9Ks9y0L5lcBbvp5T+i0E=",
+        "owner": "NilFoundation",
+        "repo": "plugin",
+        "rev": "b9c980f349b122583cddee7cd604d1dc81583112",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "repo": "plugin",
+        "type": "github"
+      }
+    },
+    "pm_assigner": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1689146263,
+        "narHash": "sha256-hfubZBVdNIqGAANdire+Di7+X+wr5rV37Vk2r3/BGi8=",
+        "owner": "NilFoundation",
+        "repo": "zkllvm-assigner",
+        "rev": "d9325d6428bbe08c144676dfad7a0bea5b9f1bf4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "ref": "d9325d6428bbe08c144676dfad7a0bea5b9f1bf4",
+        "repo": "zkllvm-assigner",
+        "type": "github"
+      }
+    },
+    "pm_blueprint": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1689287687,
+        "narHash": "sha256-o7oM7VX0CG86DG+Lz8YxkOdPqkkbOj2i3FLXQrea7l4=",
+        "owner": "NilFoundation",
+        "repo": "zkllvm-blueprint",
+        "rev": "4a98b9919d8a0bc4a17510384072038954be05aa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "ref": "4a98b9919d8a0bc4a17510384072038954be05aa",
+        "repo": "zkllvm-blueprint",
+        "type": "github"
+      }
+    },
+    "pm_circifier": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1688983431,
+        "narHash": "sha256-+9M0Yjr/n83CndMBhjomeQzHDaWxzzvcfc8Q/3gVga4=",
+        "owner": "NilFoundation",
+        "repo": "zkllvm-circifier",
+        "rev": "65a087de455b481e6d0c3b5b2e3e152097ea9bb6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "ref": "65a087de455b481e6d0c3b5b2e3e152097ea9bb6",
+        "repo": "zkllvm-circifier",
+        "type": "github"
+      }
+    },
+    "pm_crypto3_hash": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1673983680,
+        "narHash": "sha256-FVs7hCBJ1wyDJuNomZX5o5NVozVwnvGPt40z/52QX3Y=",
+        "owner": "NilFoundation",
+        "repo": "crypto3-hash",
+        "rev": "9b1d470036b837294c8768611a5ae83597065e7f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "ref": "9b1d470036b837294c8768611a5ae83597065e7f",
+        "repo": "crypto3-hash",
+        "type": "github"
+      }
+    },
+    "pm_crypto3_zk": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1688463536,
+        "narHash": "sha256-e9hAEJJ4gV6kdHYTYSiLpws8wDEt0Q+bNn/AY9MY1sc=",
+        "owner": "NilFoundation",
+        "repo": "crypto3-zk",
+        "rev": "ff9ef973625254c761e3ef6647fe9cecfb07642d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "ref": "ff9ef973625254c761e3ef6647fe9cecfb07642d",
+        "repo": "crypto3-zk",
+        "type": "github"
+      }
+    },
+    "pm_crypto3_zk_marshalling": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1686072751,
+        "narHash": "sha256-CtdolB37LrG5smpuWQeMhL7xfwnfF1zhuZIvb5Dvm0M=",
+        "owner": "NilFoundation",
+        "repo": "crypto3-zk-marshalling",
+        "rev": "6479d8ab50ea2d3f272dcc97bfaa438232e669aa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "ref": "6479d8ab50ea2d3f272dcc97bfaa438232e669aa",
+        "repo": "crypto3-zk-marshalling",
+        "type": "github"
+      }
+    },
+    "pm_transpiler": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1686065363,
+        "narHash": "sha256-fJCypiyEnlyLxbo/yypol0D+4+A22K56lphmDC52UqE=",
+        "owner": "NilFoundation",
+        "repo": "zkllvm-transpiler",
+        "rev": "b5fb9115404fa6a581dddd88c4068b2844ea43ad",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "ref": "b5fb9115404fa6a581dddd88c4068b2844ea43ad",
+        "repo": "zkllvm-transpiler",
+        "type": "github"
+      }
+    },
+    "proof-market-toolchain": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1695816612,
+        "narHash": "sha256-z7893/Ws5JE7XfJN+GDmbn4fxeTle7k9dwFuUlXO+Rk=",
+        "owner": "NilFoundation",
+        "repo": "proof-market-toolchain",
+        "rev": "42b87863186084137397d4994c9b45d3acd0608b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NilFoundation",
+        "repo": "proof-market-toolchain",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
+        "actor_blueprint": "actor_blueprint",
+        "actor_cluster": "actor_cluster",
+        "actor_container": "actor_container",
+        "actor_core": "actor_core",
+        "actor_math": "actor_math",
+        "actor_network": "actor_network",
+        "actor_zk": "actor_zk",
+        "application": "application",
         "assigner": "assigner",
         "blueprint": "blueprint",
         "boost_cmake": "boost_cmake",
@@ -473,6 +825,7 @@
         "crypto3_algebra": "crypto3_algebra",
         "crypto3_algebra_marshalling": "crypto3_algebra_marshalling",
         "crypto3_block": "crypto3_block",
+        "crypto3_blueprint": "crypto3_blueprint",
         "crypto3_codec": "crypto3_codec",
         "crypto3_containers": "crypto3_containers",
         "crypto3_hash": "crypto3_hash",
@@ -492,8 +845,20 @@
         "crypto3_vdf": "crypto3_vdf",
         "crypto3_zk": "crypto3_zk",
         "crypto3_zk_marshalling": "crypto3_zk_marshalling",
+        "dpdk": "dpdk",
+        "epoll_shim": "epoll_shim",
         "marshalling": "marshalling",
+        "module": "module",
         "nixpkgs": "nixpkgs",
+        "plugin": "plugin",
+        "pm_assigner": "pm_assigner",
+        "pm_blueprint": "pm_blueprint",
+        "pm_circifier": "pm_circifier",
+        "pm_crypto3_hash": "pm_crypto3_hash",
+        "pm_crypto3_zk": "pm_crypto3_zk",
+        "pm_crypto3_zk_marshalling": "pm_crypto3_zk_marshalling",
+        "pm_transpiler": "pm_transpiler",
+        "proof-market-toolchain": "proof-market-toolchain",
         "rslang": "rslang",
         "stdlib": "stdlib",
         "transpiler": "transpiler",
