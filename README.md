@@ -16,13 +16,16 @@ And wait. After 30 minutes or so, you should have everything built correctly in 
 
 ## Compiling circuits
 
+This is how you can compile a simple circuit for a strlen function
 
-./result/bin/clang -target assigner -I./result/include/zkllvm/c++ -I./result/include/zkllvm -D__ZKLLVM__ -emit-llvm -S -o circuit.ll strlen.cpp
+```sh
+cd example
 
-./result/bin/llvm-link -S -o final_circuit.ll circuit.ll ./result/lib/zkllvm/zkllvm-libc.ll
+clang -target assigner -I$ZKLLVM/include/zkllvm/c++ -I$ZKLLVM/include/zkllvm -D__ZKLLVM__ -emit-llvm -S -o circuit.ll strlen.cpp
 
-./result/bin/assigner -b final_circuit.ll -i strlen.inp -t assignment.tbl -c circuit.crct -e pallas
+llvm-link -S -o final_circuit.ll circuit.ll $ZKLLVM/lib/zkllvm/zkllvm-libc.ll
 
-checking:
+assigner -b final_circuit.ll -i strlen.inp -t assignment.tbl -c circuit.crct -e pallas
+```
 
-../result/bin/assigner -b final_circuit.ll -i strlen.inp -t assignment.tbl -c circuit.crct -e pallas --check
+TODO: describe how to do proving

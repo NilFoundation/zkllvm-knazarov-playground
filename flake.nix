@@ -258,18 +258,26 @@
         default = zkllvm;
       });
       devShells = forAllSystems ({ pkgs }: rec {
-        default = pkgs.mkShell {
-          buildInputs = [
-            (pkgs.callPackage ./zkllvm.nix {
-              repos = repos;
-              stdenv = pkgs.llvmPackages_16.stdenv;
-            })
-            (pkgs.callPackage ./proof-market-toolchain.nix {
-              repos = repos;
-              stdenv = pkgs.llvmPackages_16.stdenv;
-            })
+        default = let
 
+            zkllvm = (pkgs.callPackage ./zkllvm.nix {
+              repos = repos;
+              stdenv = pkgs.llvmPackages_16.stdenv;
+            });
+            proof-market-toolchain = (pkgs.callPackage ./proof-market-toolchain.nix {
+              repos = repos;
+              stdenv = pkgs.llvmPackages_16.stdenv;
+            });
+        in
+          pkgs.mkShell {
+          buildInputs = [
+            zkllvm
+            proof-market-toolchain
           ];
+          shellHook =
+          ''
+            export ZKLLVM=${zkllvm}
+          '';
         };
       });
     };
