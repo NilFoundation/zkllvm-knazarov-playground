@@ -1,7 +1,11 @@
 { lib, stdenv, pkgs, repos,
 
 }:
-stdenv.mkDerivation rec {
+# If we compile the proof-producer with anything but clang12, then
+# circuits that have "const char*" parameters will lead to the
+# proof producer crashing. This is a known problem. See:
+# https://github.com/NilFoundation/proof-market-toolchain/pull/86
+pkgs.llvmPackages_12.stdenv.mkDerivation rec {
   pname = "proof-market-toolchain";
   version = "0.1.0";
 
