@@ -6,13 +6,13 @@ It can also be used to test whether or not latest versions of all repositories b
 
 ## Getting started
 
-To build zkllvm and related utilities, just do:
+To get a shell with the zkllvm and a prover, just do this:
 
 ```sh
-nix build
+nix develop
 ```
 
-And wait. After 30 minutes or so, you should have everything built correctly in the `result/` directory.
+And wait for about 30 minutes. It will drop you to a shell where the "clang" binary would point to the one from zkllvm toolchain.
 
 ## Compiling circuits
 
