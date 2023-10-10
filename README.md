@@ -21,11 +21,22 @@ This is how you can compile a simple circuit for a strlen function
 ```sh
 cd example
 
-clang -target assigner -I$ZKLLVM/include/zkllvm/c++ -I$ZKLLVM/include/zkllvm -D__ZKLLVM__ -emit-llvm -S -o circuit.ll strlen.cpp
+clang -target assigner -I$ZKLLVM/include/zkllvm/c++ -I$ZKLLVM/include/zkllvm -D__ZKLLVM__ -emit-llvm -S -o circuit.ll integer_arithmetics.cpp
 
 llvm-link -S -o final_circuit.ll circuit.ll $ZKLLVM/lib/zkllvm/zkllvm-libc.ll
 
-assigner -b final_circuit.ll -i strlen.inp -t assignment.tbl -c circuit.crct -e pallas
+assigner -b final_circuit.ll -i integer_arithmetics.inp -t assignment.tbl -c circuit.crct -e pallas
 ```
 
-TODO: describe how to do proving
+
+Then generate a file that is suitable for the prover:
+
+```sh
+prepare_statement.py --circuit final_circuit.ll --name strlen --type placeholder-zkllvm --private --output integer_arithmetics.json
+```
+
+Then generate a proof:
+
+```sh
+proof-generator --circuit_input integer_arithmetics.json --public_input integer_arithmetics.inp --proof_out proof.txt -c config.ini
+```

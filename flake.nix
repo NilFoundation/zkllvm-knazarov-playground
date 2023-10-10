@@ -264,7 +264,7 @@
               repos = repos;
               stdenv = pkgs.llvmPackages_16.stdenv;
             });
-            proof-market-toolchain = (pkgs.callPackage ./proof-market-toolchain.nix {
+            proof-market-toolchain = pkgs.enableDebugging (pkgs.callPackage ./proof-market-toolchain.nix {
               repos = repos;
               stdenv = pkgs.llvmPackages_16.stdenv;
             });
@@ -273,6 +273,7 @@
           buildInputs = [
             zkllvm
             proof-market-toolchain
+            pkgs.gdb
           ];
           shellHook =
           ''

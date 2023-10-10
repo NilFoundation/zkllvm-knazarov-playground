@@ -83,10 +83,10 @@ stdenv.mkDerivation rec {
   #addAutoPatchelfSearchPath ${placeholder "out"}/zkllvm/lib/
   #'';
 
-  patches = [ ./proofmarket-cm.patch ./boost_filesystem.patch ];
+  patches = [ ./proofmarket-cm.patch ./boost_filesystem.patch ./prepare_statement.patch];
 
   cmakeFlags = [
-    "-DCMAKE_BUILD_TYPE=Release"
+    "-DCMAKE_BUILD_TYPE=Debug"
     #"-DCMAKE_INSTALL_PREFIX=${placeholder "out"}/zkllvm"
     "-DBoost_USE_STATIC_LIBS=FALSE"
     "-DZKLLVM_VERSION=0.1.0"
@@ -101,6 +101,7 @@ stdenv.mkDerivation rec {
     mkdir -p $out/bin
     mkdir -p $out/lib
     cp bin/proof-generator/proof-generator $out/bin
+    cp ../scripts/prepare_statement.py $out/bin
     cp -r libs/zkllvm-circifier/llvm/lib/*so* $out/lib
   '';
 
