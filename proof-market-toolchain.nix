@@ -41,46 +41,6 @@ pkgs.llvmPackages_12.stdenv.mkDerivation rec {
   unpackPhase = ''
     unpackFile "${src}"
     chmod -R u+rw ./source
-
-    cp -rT --no-preserve=mode,ownership "${repos.pm_assigner}"/ ./source/libs/zkllvm-assigner
-    cp -rT --no-preserve=mode,ownership "${repos.pm_transpiler}"/ ./source/libs/zkllvm-transpiler
-    cp -rT --no-preserve=mode,ownership "${repos.pm_circifier}"/ ./source/libs/zkllvm-circifier
-
-    cp -rT --no-preserve=mode,ownership "${repos.crypto3_algebra}"/ ./source/libs/algebra
-    cp -rT --no-preserve=mode,ownership "${repos.application}"/ ./source/libs/application
-    cp -rT --no-preserve=mode,ownership "${repos.crypto3_block}"/ ./source/libs/block
-    cp -rT --no-preserve=mode,ownership "${repos.pm_blueprint}"/ ./source/libs/blueprint
-    cp -rT --no-preserve=mode,ownership "${repos.crypto3_codec}"/ ./source/libs/codec
-    cp -rT --no-preserve=mode,ownership "${repos.crypto3_containers}"/ ./source/libs/containers
-    cp -rT --no-preserve=mode,ownership "${repos.pm_crypto3_hash}"/ ./source/libs/hash
-    cp -rT --no-preserve=mode,ownership "${repos.crypto3_mac}"/ ./source/libs/mac
-    cp -rT --no-preserve=mode,ownership "${repos.crypto3_math}"/ ./source/libs/math
-    cp -rT --no-preserve=mode,ownership "${repos.crypto3_modes}"/ ./source/libs/modes
-    cp -rT --no-preserve=mode,ownership "${repos.module}"/ ./source/libs/module
-    cp -rT --no-preserve=mode,ownership "${repos.crypto3_multiprecision}"/ ./source/libs/multiprecision
-    cp -rT --no-preserve=mode,ownership "${repos.crypto3_pkpad}"/ ./source/libs/pkpad
-    cp -rT --no-preserve=mode,ownership "${repos.plugin}"/ ./source/libs/plugin
-    cp -rT --no-preserve=mode,ownership "${repos.crypto3_pubkey}"/ ./source/libs/pubkey
-    cp -rT --no-preserve=mode,ownership "${repos.crypto3_random}"/ ./source/libs/random
-    cp -rT --no-preserve=mode,ownership "${repos.crypto3_stream}"/ ./source/libs/stream
-    cp -rT --no-preserve=mode,ownership "${repos.pm_crypto3_zk}"/ ./source/libs/zk
-
-    cp -rT --no-preserve=mode,ownership "${repos.crypto3_algebra_marshalling}"/ ./source/libs/marshalling/algebra
-    cp -rT --no-preserve=mode,ownership "${repos.marshalling}"/ ./source/libs/marshalling/core
-    cp -rT --no-preserve=mode,ownership "${repos.crypto3_multiprecision_marshalling}"/ ./source/libs/marshalling/multiprecision
-    cp -rT --no-preserve=mode,ownership "${repos.pm_crypto3_zk_marshalling}"/ ./source/libs/marshalling/zk
-
-
-    cp -rT --no-preserve=mode,ownership "${repos.actor_blueprint}"/ ./source/libs/actor/blueprint
-    cp -rT --no-preserve=mode,ownership "${repos.actor_cluster}"/ ./source/libs/actor/cluster
-    cp -rT --no-preserve=mode,ownership "${repos.actor_container}"/ ./source/libs/actor/container
-    cp -rT --no-preserve=mode,ownership "${repos.actor_core}"/ ./source/libs/actor/core
-    cp -rT --no-preserve=mode,ownership "${repos.dpdk}"/ ./source/libs/actor/dpdk
-    cp -rT --no-preserve=mode,ownership "${repos.actor_math}"/ ./source/libs/actor/math
-    cp -rT --no-preserve=mode,ownership "${repos.actor_network}"/ ./source/libs/actor/network
-    cp -rT --no-preserve=mode,ownership "${repos.actor_zk}"/ ./source/libs/actor/zk
-    cp -rT --no-preserve=mode,ownership "${repos.epoll_shim}"/ ./source/libs/actor/shim/epoll
-
   '';
 
   #preBuild = ''
